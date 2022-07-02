@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import TodoList from "./TodoList";
 
 function App() {
   const [state, setState] = useState(false);
@@ -26,6 +27,7 @@ function App() {
           <img alt="test-img" src={list.url} />
         </div>
       )}
+      <TodoList />
     </div>
   );
 }
