@@ -20,7 +20,12 @@ function App() {
     <div>
       <h1>Data fetching practice</h1>
       <button onClick={handleClick}>CLICK HERE!</button>
-      {state && <div key={list.id}>{list.title}</div>}
+      {state && (
+        <div>
+          <h2>{list.title}</h2>
+          <img alt="test-img" src={list.url} />
+        </div>
+      )}
     </div>
   );
 }
