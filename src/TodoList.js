@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function TodoList() {
-  const axios = require("axios");
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ function TodoList() {
       <ul>
         {list.map((item) => (
           <>
-            <input type="checkbox" checked={item.checked} />
+            <input type="checkbox" checked={item.completed} />
             <li key={item.id}>{item.title}</li>
           </>
         ))}
